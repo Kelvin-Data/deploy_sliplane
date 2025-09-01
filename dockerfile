@@ -1,5 +1,5 @@
 # what image to use
-FROM python3.12.4-slim
+FROM python:3.12.4-slim
 
 # 1st what file to copy
 # 2nd where to copy
@@ -13,4 +13,5 @@ RUN pip install -r requirements.txt
 COPY app.py .
 
 # what command to run when the image  is executed inside a container
+
 CMD ["python3", "-m" , "flask", "run", "--host=0.0.0.0"]
